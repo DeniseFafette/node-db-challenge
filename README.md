@@ -40,11 +40,42 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+SQL is a structured query language that is used to communicate with relational database systems. The SQL language can vary depending on database management tools. A relational database stores data in tabular format grouped into rows and columns (similar to spreadsheets). A collection of rows is called a table. Each row represents a single record in the table and is made up of one or more columns. Note: Foreign keys in relational databases represent the relationships with other tables.
+
+These kinds of databases are called relational because a relation is a mathematical idea that is equivalent to a table. So relational databases are databases that store their data in tables.
+
+
 - [ ] Why do tables need a `primary key`?
+
+A primary key is used to id rows in a table. Always best to have a primary key. This way it meets first normal form (minimal requirement for relational databases) and allows you to continue along the database normalization path.Database normalization is the process of representing a database in terms of relations in standard normal forms, where first normal is a minimal requirement.
+
+Each database table needs a primary key because it ensures row-level accessibility. If you choose an appropriate primary key, you can specify a primary key value, which lets you query each table row individually and modify each row without altering other rows in the same table. The values that compose a primary key column are unique; no two values are the same.
+
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+Foreign keys are a type of table field used for creating links between tables. Like primary keys, they are most often integers that identify (rather than store) data. However, whereas a primary key is used to id rows in a table, foreign keys are used to connect a record in one table to a record in a second table.
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+A many to many relationship occurs when two entities occur many times in another entity (ex. authors <> books).
+
+We need an intermediary table that holds foreign keys that reference the primary key on the related tables. Note that while each foreign key on the intermediary table is not unique, the combinations of keys should be unique.
+
+Additional Notes:
+
+SQL subcategories
+
+Data Definition Language (DDL): used to modify database objects. Some examples are: CREATE TABLE, ALTER TABLE , and DROP TABLE.
+
+Data Manipulation Language (DML): used to manipulate the data stored in the database. Some examples are: INSERT, UPDATE , and DELETE.
+
+Data Query Language (DQL): used to ask questions about the data stored in the database. The most commonly used SQL command by far is SELECT, and it falls in this category.
+
+Data Control Language (DCL): used to manage database security and user’s access to data. This falls into the realm of Database Administrators. Some examples are GRANT and REVOKE.
+
+Transaction Control Commands: used for managing groups of statements that must execute as a unit or not execute at all. Examples are COMMIT and ROLLBACK.
+
 
 ## Minimum Viable Product
 
