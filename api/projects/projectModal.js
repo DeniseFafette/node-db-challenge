@@ -9,6 +9,6 @@ function find() {
     return db('projects')
 }
 
-function add() {
+function add(project) {
     return db('projects').insert(project)
 }

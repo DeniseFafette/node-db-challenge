@@ -9,6 +9,6 @@ function find() {
     return db('resources')
 }
 
-function add() {
+function add(resource) {
     return db('resources').insert(resource)
 }

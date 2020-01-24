@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     resources.add(req.body)
         .then(item => {
+            console.log(item)
             res.status(201).json(item)
         })
         .catch(err => {

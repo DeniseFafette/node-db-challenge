@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
             const { task_description, notes, id, task_completed, project_id, name, description } = list[0]
             const taskComplete = task_completed ? true : false
             const response = {task_description, notes, id, task_completed: taskComplete, project:{project_id, name, description}}
-            res.status(200).json(list)
+            res.status(200).json(response)
         })
         .catch(err => {
             console.log(err)
